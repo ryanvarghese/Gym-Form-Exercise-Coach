@@ -54,7 +54,7 @@
 - [YOLOV5 Notebook](https://colab.research.google.com/drive/1gDZ2xcTOgR39tGGs-EZ6i3RTs16wmzZQ)
 - [Movenet Model](https://www.tensorflow.org/hub/tutorials/movenet)
 
-## Refrences
+## References
 - [Paper 1](https://www.researchgate.net/publication/324759769_Pose_Trainer_Correcting_Exercise_Posture_using_Pose_Estimation)
 - [Paper 2](https://ieeexplore.ieee.org/abstract/document/8856547?casa_token=s7vlnKtOVoMAAAAA:kGlGEIAyXNAD7pmu6zuPOQdFNiLkenuaj3D_z-JKDixd0Nxnmi5iiS1e_cdkRkQ0hHaPHX55-JDuTF0)
 - [Paper 3](https://arxiv.org/abs/1907.05272)
