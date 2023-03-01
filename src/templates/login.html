@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="    viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="login.js"></script>
+    <title>Login System</title>
+</head>
+<body>
+ <div class="box">
+    <div id="title">
+        <i class="fas fa-user-circle fa-5x"></i> 
+        <h1>Login</h1>
+    </div>
+    <input type="email" placeholder="Enter your Email-id" id="email"><br>
+    <input type="password" placeholder="Enter Password" id="password"><br>
+    <button onclick="signUp()" id="signUp">SignUp</button>
+    <button onclick="signIn()" id="signIn">SignIn</button>
+</div>
+    
+</body>
+
+</html>

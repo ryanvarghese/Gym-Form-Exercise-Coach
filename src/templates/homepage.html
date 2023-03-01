@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+	<script src="login.js"></script>
+	<!-- Load an icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<title>Document</title>
+</head>
+<body>
+	<div class= "row">
+		<!--navigation bar-->
+		<nav>
+		   <label class="logo">GymPose</label>
+			<ul>
+				 <li><a href="homepage.html">Home<i class="fa fa-fw fa-home"></i></a></li>
+				 <li><a href="exercisewiki.html">ExerciseWIKI<i class="fa fa-book"></i></a></li>
+				 <li><a href="login.html" onclick="signOut()">SignOut<i class="fa fa-fw fa-user"></i></a></li>
+				 <!-- <button onclick="signOut()" id="signOut">SignOut</button> -->
+		    </ul>
+		</nav>
+	    
+	    <!--Carousel-->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+				</ol>
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					  <div class="info">
+						<img class="d-block w-100" src="C:\Users\ryanv_k78mbsh\Desktop\FINAL\MovenetTest\1.png"  width= 100% 
+                        height="275" alt="First slide">
+						</div>
+				  </div>
+				  <div class="carousel-item">
+					  <div class="info">
+						<img class="d-block w-100" src="C:\Users\ryanv_k78mbsh\Desktop\FINAL\MovenetTest\images\2.png"  width= 100% 
+						height="275" alt="Second slide">
+					
+						</div>
+				  </div>
+				  <div class="carousel-item">
+					  <div class="info">
+						<img class="d-block w-100" src="C:\Users\ryanv_k78mbsh\Desktop\FINAL\MovenetTest\images\3.png"  width= 100% 
+						height="275" alt="First slide">
+							  
+						</div>
+				  
+				  </div>
+				  <div class="carousel-item">
+					  <div class="info">
+						<img class="d-block w-100" src="C:\Users\ryanv_k78mbsh\Desktop\FINAL\MovenetTest\images\4.png"  width= 100% 
+						height="275" alt="First slide">
+						  
+						</div>
+				  
+				  </div>
+				  <div class="carousel-item">
+					  <div class="info">
+						<img class="d-block w-100" src="C:\Users\ryanv_k78mbsh\Desktop\FINAL\MovenetTest\images\5.png"  width= 100% 
+						height="275" alt="First slide">
+						</div>
+				  
+				  </div>
+				 <!--Carousel controls-->  
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+	    </div>
+
+	    <div class="row" id="row1">
+             <div class="col" id="button1">
+				<div class="text">Benchpress</div>
+				<div class="img">
+					<img src="C:/Users/ryanv_k78mbsh/Desktop/FINAL/MovenetTest/res/benchpress-resized.png">
+				</div>
+
+				<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
+					<input type="file" name="file"/>
+					<input type="submit" value="Upload"/>
+				</form> -->
+
+				
+			 </div>
+			 <div class="col" id="button2">
+				<div class="text">Deadlift</div>
+				<div class="img">
+					<img src="C:/Users/ryanv_k78mbsh/Desktop/FINAL/MovenetTest/res/deadlift-resized.png">
+				</div>
+			 </div>
+		</div>
+	    <div class="row" id="row2">
+			
+			<div class="col" id="button3">
+				<div class="text">Overhead Press</div>
+				<div class="img">
+					<img src="C:/Users/ryanv_k78mbsh/Desktop/FINAL/MovenetTest/res/overhead-press-resized.png">
+				</div>
+				
+			</div>
+			<div class="col" id="button4">
+				<div class="text"><a href="review.html">Squats</a></div>
+				<div class="img">
+					<img src="C:/Users/ryanv_k78mbsh/Desktop/FINAL/MovenetTest/res/squatsresized.png">
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	
+</body>
+</html>

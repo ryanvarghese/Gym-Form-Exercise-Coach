@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- Load an icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+<body>
+	<!--navigation bar--> 
+    <nav>
+        <label class="logo">LOGO</label>
+         <ul>
+              <li><a href="homepage.html">Home<i class="fa fa-fw fa-home"></i></a></li>
+              <li><a href="exercisewiki.html">ExerciseWIKI<i class="fa fa-book"></i></a></li>
+              <li><a href="#">Feedback<i class="fa fa-comment"></i></a></li>
+              <li><a href="login.html">Login<i class="fa fa-fw fa-user"></i></a></li>
+         </ul>
+    </nav>
+     
+    <div class="row" id="videoplayer">
+          <video controls loop id="video">
+            <source src="C:\Users\ryanv_k78mbsh\Desktop\FINAL\MovenetTest\animation.gif">
+          </video>
+              <img id="frame" src="">
+              <div id="knee"></div>
+              <div id="hip"></div>
+              <div id="f1"></div>
+              <div id="f2"></div>
+    <script>
+            let ws = new WebSocket("ws://localhost:8000/ws");
+            ws.onmessage = function(event) {
+                if (typeof event.data == 'string') {
+                    const value = JSON.parse(event.data);
+                    document.getElementById("f1").innerHTML = value[2];
+                    document.getElementById("f2").innerHTML = value[3];
+                    document.getElementById("hip").innerHTML = value[0];
+                    document.getElementById("knee").innerHTML = value[1];
+                }
+                else{
+                    let blob = new Blob([event.data])
+                    let blobURL = URL.createObjectURL(blob);
+                    let image = document.getElementById("frame");
+                    image.src = blobURL;
+                }
+            };
+    </script>
+    </div>
+    <div class="row" id="angle">
+            <div class="column" id="text"> Realtime angle : </div>
+            <div class="column" id="rtangle"> </div>
+    </div>   
+</body>
+</html>
